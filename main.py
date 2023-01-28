@@ -5,12 +5,12 @@ from pyrogram.errors import UserChannelsTooMuch,UserAlreadyParticipant,UserIsBlo
 from pyrogram.types import ChatJoinRequest, InlineKeyboardButton, InlineKeyboardMarkup
 from funcs import *
 
-ch1_link=os.environ.get('CH1_LINK','https://t.me/+IETklb-PG08xYTBl')
-ch2_link=os.environ.get('CH2_LINK','https://t.me/+IETklb-PG08xYTBl')
+ch1_link=os.environ.get('CH1_LINK','https://t.me/crazebots')
+ch2_link=os.environ.get('CH2_LINK','https://t.me/crazebots')
 
 
-ch1_title=os.environ.get('CH1_TITLE','🍿 All Movies Uploaded Here 🍿')
-ch2_title=os.environ.get('CH2_TITLE',"🔞 Sunny Leone XXX Video's 🔞")
+ch1_title=os.environ.get('CH1_TITLE','📣Bot Update Channel📣')
+ch2_title=os.environ.get('CH2_TITLE',"📣Bot Update Channel📣")
 
 
 BOT_TOKEN=os.environ.get('BOT_TOKEN','5631379160:AAEHUFFqtf3grBojpmFwmJaXwzNd2nop9s4')
@@ -21,7 +21,7 @@ app = Client("ApprovalReqBot", api_id=API_ID,
              api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 
-sudo_users=[1953040213,5144980226,874964742,839221827,5294965763,1195182155]
+sudo_users=[1953040213,5144980226,874964742,839221827,5294965763]
 image="https://te.legra.ph/file/9ccb06149e194ba2f38d7.jpg"
 @app.on_message(filters.command('start'))
 def start_cmd(_, M):
