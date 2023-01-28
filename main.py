@@ -13,7 +13,7 @@ ch1_title=os.environ.get('CH1_TITLE','📣Bot Update Channel📣')
 ch2_title=os.environ.get('CH2_TITLE',"📣Bot Update Channel📣")
 
 
-BOT_TOKEN=os.environ.get('BOT_TOKEN','5631379160:AAEHUFFqtf3grBojpmFwmJaXwzNd2nop9s4')
+BOT_TOKEN=os.environ.get('BOT_TOKEN','5962680570:AAEzXh-MwydZtx-ZEc5kiFODvMwubHlE4w8')
 
 API_ID = 16514976
 API_HASH = '40bd8634b3836468bb2fb7eafe39d81a'
@@ -56,7 +56,7 @@ def broadcast(_, M):
        try:
         app.copy_message(User,cht, msg_id)
         success_count+=1
-        time.sleep(0.0001)
+        time.sleep(0.1)
 
        except UserIsBlocked:
         failed_count+=1
