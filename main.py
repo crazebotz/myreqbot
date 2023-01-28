@@ -22,13 +22,13 @@ app = Client("ApprovalReqBot", api_id=API_ID,
 
 
 sudo_users=[1953040213,5144980226,874964742,839221827,5294965763,1195182155]
-
+image="https://te.legra.ph/file/9ccb06149e194ba2f38d7.jpg"
 @app.on_message(filters.command('start'))
 def start_cmd(_, M):
     #button2 = [[ InlineKeyboardButton("🆎 About", callback_data="aboutbtn"), InlineKeyboardButton("🆘 Help", callback_data="helpbtn") ],]
-    text = f"Hello {M.from_user.mention} 👋\n\nI'm an auto approve Admin Join Requests Bot.\n\n<b>I can approve users in Groups/Channels.</b>Add me to your chat and promote me to admin with add members permission."
+    text = f"Hello {M.from_user.mention} 👋\n\nI'm an auto approve Admin Join Requests Bot.\n\n<b>I can approve users in Groups/Channels.</b>Add me to your channel or group and promote me to admin with add members permission.\nCreated by @CrazeBots with ❤️."
     app.send_photo(
-        M.chat.id, 'AgACAgEAAxkBAAMrY2kf8xOY7TNIdqa91Mbjxm5jhMAAAiGqMRtCTUlHCF1quWgHoiIACAEAAwIAA3kABx4E', text)
+        M.chat.id, image, text)
 
 
 @app.on_message(filters.command(['user','users']) & filters.user(sudo_users))
@@ -56,7 +56,7 @@ def broadcast(_, M):
        try:
         app.copy_message(User,cht, msg_id)
         success_count+=1
-        time.sleep(0.10)
+        time.sleep(0.0001)
 
        except UserIsBlocked:
         failed_count+=1
@@ -76,7 +76,7 @@ def exit_cmd(_, M):
     os.remove("test.py")
     os._exit(1)
 
-button = [[InlineKeyboardButton(f"{ch1_title}", url=f"{ch1_link}")],[InlineKeyboardButton(f"{ch2_title}", url=f"{ch2_link}")]]
+button = [[InlineKeyboardButton(f"{ch1_title}", url=f"{ch1_link}")]]
 @app.on_chat_join_request()
 def reqs_handler(client: app, message: ChatJoinRequest):
     CHAT = message.chat
