@@ -61,7 +61,8 @@ def broadcast(_, M):
        except UserIsBlocked:
         failed_count+=1
         pass
-       except:
+       except Exception as ex:
+        print(ex)  
         failed_count+=1
         pass
 
